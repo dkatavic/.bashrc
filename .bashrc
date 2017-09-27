@@ -9,7 +9,7 @@ function parse_git_branch {
   echo -n $(git branch --no-color 2>/dev/null | awk -v out=$1 '/^*/ { if(out=="") print $2; else print out}')
 }
 
-PS1='️\[\e[m\]\[\e[1;32m\]¬ \[\e[4;32m\]\u\[\e[m\] \[\e[0;37m\]\w\[\e[m\] \[\e[0;33m\]$(parse_git_branch)\[\e[m\]\[\e[1;32m\] \$\[\e[m\] \[\e[0;37m\] ';
+PS1='️\[\e[m\]\[\e[1;32m\]¬ \[\e[4;32m\]\u\[\e[m\] \[\e[0;37m\]\w\[\e[m\] \[\e[0;33m\]$(parse_git_branch)\[\e[m\]\[\e[1;32m\] \$\[\e[m\] \[\e[0;37m\]\n';
 clear;
 
 alias "ut"="npm run test:unit"
