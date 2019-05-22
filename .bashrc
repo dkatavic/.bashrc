@@ -1,5 +1,6 @@
 alias ll="ls -la"
 alias docex="docker exec -it "
+alias gco="git checkout"
 
 
 export CLICOLOR=1;
